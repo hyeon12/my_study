@@ -6,7 +6,12 @@ public class AlphaArray {
 
         char[][] alphabets = new char[13][2];
         //행 [13] 열 [2] -> 1행의 1,2열 = [1].length
-        char ch = 'a'; //97
+
+        int num = (int)'a';
+        char ch = (char)(num-32);
+        //char ch = 'A';
+
+        //소문자로 하고싶을때는 char ch = 'a'; // 97
         //System.out.println((int)ch);
 
         for(int i = 0; i < alphabets.length; i++){//행의 길이
