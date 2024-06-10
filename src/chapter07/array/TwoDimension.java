@@ -1,4 +1,4 @@
-package chapter07;
+package chapter07.array;
 
 public class TwoDimension {
     public static void main(String[] args){

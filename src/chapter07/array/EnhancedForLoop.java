@@ -1,4 +1,4 @@
-package chapter07;
+package chapter07.array;
 
 public class EnhancedForLoop {
     public static void main(String[] args) {
