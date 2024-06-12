@@ -1,5 +1,7 @@
 package chapter08.polymorphism;
 
+import java.util.ArrayList;
+
 public class AnimalTest {
     public void moveAnimal(Animal animal){
         animal.move();
@@ -10,10 +12,13 @@ public class AnimalTest {
 
     public static void main(String[] args) {
 
-        AnimalTest aTest = new AnimalTest();
-        aTest.moveAnimal(new Human());
-        aTest.moveAnimal(new Eagle());
-        aTest.moveAnimal(new Tiger());
-        aTest.moveAnimal(new Animal());
+//        AnimalTest aTest = new AnimalTest();
+//        aTest.moveAnimal(new Human());
+//        aTest.moveAnimal(new Eagle());
+//        aTest.moveAnimal(new Tiger());
+//        aTest.moveAnimal(new Animal());
+
+
+        ArrayList<Animal> aniList = new ArrayList<Animal>();
     }
 }

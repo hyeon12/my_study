@@ -23,11 +23,13 @@ public class CustomerTest {
 
         System.out.println("====== 할인율과 보너스 포인트 계산 ======");
         int price = 10000;
-        for(Customer customer : customerList){
+        for(Customer customer : customerList) {
             int cost = customer.calcPrice(price); //고객등급별 금액
             System.out.println(customer.getCustomerName() + "님이 " + cost + "원 지불하셨습니다.");
             System.out.println(customer.getCustomerName() + "님의 현재 보너스 포인트는 " + customer.bonusPoint + "점입니다.");
             //bonusPoint와 customerName으로 바로접근이 안되네? 왜일까 ---> default 접근제어자이기 때문!!
+
         }
     }
 }
+
