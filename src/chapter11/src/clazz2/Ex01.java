@@ -1,4 +1,4 @@
-package chapter11.src.clazz;
+package chapter11.src.clazz2;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package chapter11.src.clazz;
+package chapter11.src.clazz2;
 
 public class JoinService {
     public JoinService() {
