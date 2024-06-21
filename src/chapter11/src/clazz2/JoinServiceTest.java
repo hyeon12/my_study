@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ex01 {
+public class JoinServiceTest {
     public static void main(String[] args) throws Exception{
         Class clazz = JoinService.class;
 
