@@ -4,7 +4,7 @@ public class Outer2 {
     Runnable getRunnable(int i){
         int num = 100;
 
-        return new Runnable() {//익명 내부 클래스 Runnable 인터페이스 생성
+        return  new Runnable() {//익명 내부 클래스 Runnable 인터페이스 생성
             @Override
             public void run() {
                 //num = 200;
@@ -15,6 +15,8 @@ public class Outer2 {
             }
         };
         //클래스 끝 ;
+
+
     }
 
     Runnable runner = new Runnable() {//익명 내부 클래스를 변수에 대입
