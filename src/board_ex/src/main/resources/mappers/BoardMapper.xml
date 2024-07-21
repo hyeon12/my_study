@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.BoardMapper">
+    <resultMap id="boardMap" type="board.Board">
+        <result column="SEQ" property="seq" />
+        <result column="POSTER" property="poster"/>
+        <result column="SUBJECT" property="subject"/>
+        <result column="CONTENT" property="content"/>
+        <result column="REG_DT" property="regDt"/>
+        <result column="MOD_DT" property="modDt"/>
+    </resultMap>
+
+    <select id="getList" resultType="board.Board">
+        SELECT * FROM BOARD
+    </select>
+
+    <insert id="insert">
+        <selectKey keyProperty="seq" order="BEFORE" resultType="long">
+            SELECT SEQ_BOARD.NEXTVAL FROM DUAL
+        </selectKey>
+
+        INSERT INTO BOARD (SEQ, POSTER, SUBJECT, CONTENT)
+        VALUES
+        (#{seq}, #{poster}, #{subject}, #{content})
+    </insert>
+
+    <update id="update">
+        UPDATE BOARD
+            SET
+                SUBJECT = #{subject},
+                CONTENT = #{content},
+                MOD_DT = SYSDATE
+        WHERE POSTER=#{poster}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM BOARD WHERE POSTER=#{poster}
+    </delete>
+</mapper>

@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.choongang'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtimeOnly 'com.oracle.database.jdbc:ojdbc11:23.4.0.24.05'//구현체 설치
+    implementation 'com.oracle.database.nls:orai18n:23.4.0.24.05'//글자 깨짐 방지
+    implementation 'org.mybatis:mybatis:3.5.16'//매핑 기능
+    compileOnly 'org.projectlombok:lombok:1.18.32'//컴파일 할때만 실행
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'//애노테이션 기능
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
